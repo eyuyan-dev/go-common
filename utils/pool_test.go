@@ -1,12 +1,18 @@
-package utils
+package utils_test
 
 import (
+	"fmt"
 	"sync/atomic"
 	"testing"
+	"time"
+
+	"github.com/eyuyan-dev/go-common/ext"
+
+	"github.com/eyuyan-dev/go-common/utils"
 )
 
 func TestWaitGroupPool(t *testing.T) {
-	wgp := NewWaitGroupPool(10)
+	wgp := utils.NewWaitGroupPool(10)
 
 	var total uint32
 
@@ -15,7 +21,11 @@ func TestWaitGroupPool(t *testing.T) {
 		go func(total *uint32) {
 			defer wgp.Done()
 			atomic.AddUint32(total, 1)
+			t := ext.RangeRand(1, 5)
+			//fmt.Println("Sleep ", t)
+			time.Sleep(time.Second * time.Duration(t))
 		}(&total)
+		fmt.Println(wgp.IsBlock(), wgp.IsClose(), wgp.GetQueueCount(), wgp.GetWorkCount())
 	}
 	wgp.Wait()
 

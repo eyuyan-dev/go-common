@@ -45,6 +45,7 @@ func Request(method, url string, body io.Reader, config *Config) (*http.Response
 	transport.DisableCompression = true
 	transport.TLSHandshakeTimeout = 10 * time.Second
 	transport.TLSClientConfig = &tls.Config{InsecureSkipVerify: true}
+	transport.DisableKeepAlives = false
 
 	req, err := http.NewRequest(method, url, body)
 	if err != nil {

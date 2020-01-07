@@ -12,12 +12,12 @@ func TestNewHttpProxy(t *testing.T) {
 	getUrl := "http://httpbin.org/get"
 
 	config := request.Config{
-		Proxy: request.NewHttpProxy("http://112.85.125.45:9999"),
+		Proxy: request.NewHttpProxy("http://127.0.0.1:1080"),
 	}
 
 	resp, _ := request.Get(getUrl, &config)
 
-	if !strings.Contains(resp, "112.85.125.45") {
+	if !strings.Contains(resp, "httpbin.org") {
 		t.Error("http代理可能失效了")
 	}
 }

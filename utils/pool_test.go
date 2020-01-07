@@ -6,8 +6,6 @@ import (
 	"testing"
 	"time"
 
-	"github.com/eyuyan-dev/go-common/ext"
-
 	"github.com/eyuyan-dev/go-common/utils"
 )
 
@@ -21,9 +19,9 @@ func TestWaitGroupPool(t *testing.T) {
 		go func(total *uint32) {
 			defer wgp.Done()
 			atomic.AddUint32(total, 1)
-			t := ext.RangeRand(1, 5)
+			//t := ext.RangeRand(1, 5)
 			//fmt.Println("Sleep ", t)
-			time.Sleep(time.Second * time.Duration(t))
+			time.Sleep(time.Second * time.Duration(1))
 		}(&total)
 		fmt.Println(wgp.IsBlock(), wgp.IsClose(), wgp.GetQueueCount(), wgp.GetWorkCount())
 	}

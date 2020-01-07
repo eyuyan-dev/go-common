@@ -47,3 +47,18 @@ func FileName(name string, ext string) string {
 		return fmt.Sprintf("%s.%s", limitedName, ext)
 	}
 }
+
+// PathIsExist  files and folders exist
+func PathIsExist(f string) bool {
+	_, err := os.Stat(f)
+	return err == nil || os.IsExist(err)
+}
+
+// MkDir create directory
+func MkDir(path string) (bool, error) {
+	err := os.MkdirAll(path, os.ModePerm)
+	if err != nil {
+		return false, err
+	}
+	return true, nil
+}

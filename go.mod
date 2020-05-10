@@ -1,4 +1,4 @@
-module github.com/eyuyan-dev/go-common
+module github.com/gopkg-dev/go-common
 
 go 1.13
 

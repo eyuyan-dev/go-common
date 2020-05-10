@@ -1,8 +1,8 @@
 package ext_test
 
 import (
+	"github.com/gopkg-dev/go-common/ext"
 	"testing"
-
 )
 
 func TestLimitLength(t *testing.T) {

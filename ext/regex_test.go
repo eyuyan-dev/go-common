@@ -1,9 +1,9 @@
 package ext_test
 
 import (
+	"github.com/gopkg-dev/go-common/ext"
 	"reflect"
 	"testing"
-
 )
 
 func TestMatchOneOf(t *testing.T) {

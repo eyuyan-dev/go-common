@@ -2,11 +2,10 @@ package ext
 
 import (
 	"fmt"
+	"github.com/gopkg-dev/go-common/request"
 	"net/url"
 	"reflect"
 	"strings"
-
-	"github.com/eyuyan-dev/go-common/request"
 )
 
 func MapStringToUrlParams(val map[string]string) string {

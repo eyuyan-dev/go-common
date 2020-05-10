@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/eyuyan-dev/go-common/utils"
+	"github.com/gopkg-dev/go-common/utils"
 )
 
 func TestWaitGroupPool(t *testing.T) {

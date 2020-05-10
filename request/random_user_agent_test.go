@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/eyuyan-dev/go-common/request"
+	"github.com/gopkg-dev/go-common/request"
 )
 
 func TestRandomUserAgent(t *testing.T) {

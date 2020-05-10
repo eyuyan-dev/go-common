@@ -1,9 +1,10 @@
 package ext_test
 
 import (
+	"github.com/gopkg-dev/go-common/ext"
 	"testing"
 
-	"github.com/eyuyan-dev/go-common/ext"
+
 )
 
 func TestDomain(t *testing.T) {

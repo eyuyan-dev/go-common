@@ -1,6 +1,8 @@
 package request_test
 
 import (
+	"github.com/gopkg-dev/go-common/ext"
+	"github.com/gopkg-dev/go-common/request"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -8,9 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/eyuyan-dev/go-common/ext"
 
-	"github.com/eyuyan-dev/go-common/request"
 )
 
 func TestGet(t *testing.T) {

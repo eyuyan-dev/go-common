@@ -4,7 +4,6 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/eyuyan-dev/go-common/ext"
 )
 
 func TestMatchOneOf(t *testing.T) {

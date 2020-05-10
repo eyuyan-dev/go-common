@@ -3,7 +3,6 @@ package ext_test
 import (
 	"testing"
 
-	"github.com/eyuyan-dev/go-common/ext"
 )
 
 func TestLimitLength(t *testing.T) {
